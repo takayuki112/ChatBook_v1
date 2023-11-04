@@ -1,0 +1,18 @@
+/* styles.css */
+.tab-pane {
+    -fx-background-color: #333; /* Set the background color of the TabPane */
+}
+
+.tab-pane .tab {
+    -fx-background-color: #555; /* Set the background color of tabs */
+    -fx-text-fill: #fff; /* Set the text color of tabs */
+}
+
+.tab-pane .tab-button {
+    -fx-background-color: #555; /* Set the background color of tab buttons */
+}
+
+.tab-pane .tab .button {
+    -fx-background-color: #0077FF; /* Set the background color of buttons within tabs */
+    -fx-text-fill: #fff; /* Set the text color of buttons within tabs */
+}
