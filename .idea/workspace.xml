@@ -4,34 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/BeforeLunch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/NestedTabPanes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/NestedTabPanes_v1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/NestedTabsExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/NestedTabsExample_testing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/TabPaneExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/TabPaneWithCoolStyles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/VerticalTabs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/WithFolders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/bl_v1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/chatbookui_v1/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
+    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Before Lunch sexsux">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/AllChatsUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/AllUsersDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/ui/str/ChatButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/ui/str/Folder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/ui/str/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/welcome/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatbookUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/bl_v1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatbookui_v1/bl_v1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +36,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2XhCaavqMRZHudEmBVrv6WlfyFE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -65,22 +55,69 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/ChatBook-UI_v1/src/main/java/com/example/chatbookui_v1",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/HP/IdeaProjects/ChatBook-UI_v1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2850575",
     "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\java\user" />
       <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\java\com\example\chatbookui_v1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\resources\com\example\chatbookui_v1" />
+      <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\java\user" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="user.ui" />
+      <recent name="user.welcome" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.chatbookui_v1" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LoginPortal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.welcome.LoginPortal" />
+      <module name="ChatBook-UI_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.welcome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.welcome.Test" />
+      <module name="ChatBook-UI_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.welcome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.LoginPortal" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,11 +127,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699071992547</updated>
-      <workItem from="1699071993594" duration="9800000" />
+      <workItem from="1699071993594" duration="10157000" />
+      <workItem from="1699086405661" duration="12725000" />
+      <workItem from="1699101756220" duration="2706000" />
+      <workItem from="1699110103506" duration="1508000" />
+      <workItem from="1699115179284" duration="5236000" />
+      <workItem from="1699120737058" duration="1873000" />
+      <workItem from="1699122622376" duration="2734000" />
+      <workItem from="1699125368344" duration="77000" />
+      <workItem from="1699125455476" duration="235000" />
+      <workItem from="1699125700799" duration="6347000" />
     </task>
+    <task id="LOCAL-00001" summary="Before Lunch sexsux">
+      <option name="closed" value="true" />
+      <created>1699081911613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699081911613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Before Lunch sexsux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before Lunch sexsux" />
   </component>
 </project>

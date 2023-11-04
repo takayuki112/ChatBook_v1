@@ -7,7 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class bl_v1 extends Application {
+public class AllChatsUI extends Application {
 
     @Override
     public void start(Stage primaryStage) {

@@ -1,0 +1,110 @@
+package user.welcome;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+import javafx.geometry.Pos;
+import user.User;
+
+import static javafx.application.Application.launch;
+
+public class NewUserUI extends Application {
+    public void display() {
+        Stage signUpStage = new Stage();
+        signUpStage.setTitle("New User");
+
+        VBox layout = new VBox();
+        layout.setSpacing(10);
+        layout.setAlignment(Pos.CENTER);
+
+        // Add a header section
+        Text headerText = new Text("Create a new Account - ");
+        headerText.setFont(Font.font(20));
+
+        HBox usernameBox = new HBox();
+        usernameBox.setSpacing(10);
+        Label usernameLabel = new Label("Username: ");
+        TextField usernameField = new TextField();
+        usernameField.setPromptText("Enter a username");
+        usernameBox.getChildren().addAll(usernameLabel, usernameField);
+        usernameBox.setAlignment(Pos.CENTER);
+
+        HBox passwordBox = new HBox();
+        passwordBox.setSpacing(10);
+        Label passwordLabel = new Label("Password: ");
+        PasswordField passwordField = new PasswordField();
+        passwordField.setPromptText("Enter your password");
+        passwordBox.getChildren().addAll(passwordLabel, passwordField);
+        passwordBox.setAlignment(Pos.CENTER);
+
+        HBox passwordBox2 = new HBox();
+        passwordBox2.setSpacing(10);
+        Label passwordLabel2 = new Label("Re-enter : ");
+        PasswordField passwordField2 = new PasswordField();
+        passwordField2.setPromptText("Password Again ");
+        passwordBox2.getChildren().addAll(passwordLabel2, passwordField2);
+        passwordBox2.setAlignment(Pos.CENTER);
+
+        //ACTION BUTTONS
+
+        Button signUp = new Button("Sign Up");
+        signUp.setOnAction(e -> {
+            String username = usernameField.getText();
+            String password = passwordField.getText();
+            String password2 = passwordField2.getText();
+
+            if(password2.equals(password)){
+                createNewUser(username, password);
+            }
+            else {
+                showAlert("Password Mismatch", "Passwords do not match.");
+                passwordField.clear();
+                passwordField2.clear();
+            }
+        });
+
+        Button backButton = new Button("Back");
+        backButton.setOnAction(e -> {
+            WelcomeToChatbookUI u = new WelcomeToChatbookUI();
+
+            u.start(new Stage());
+            signUpStage.close();
+        });
+
+        layout.getChildren().addAll(headerText, usernameBox, passwordBox, passwordBox2, signUp, backButton);
+
+        Scene scene = new Scene(layout, 400, 250); // Adjust the width and height as needed
+        signUpStage.setScene(scene);
+        signUpStage.show();
+    }
+
+    // Implement your authentication logic here
+
+    public void createNewUser(String usr, String pwd){
+        User u = new User(usr, pwd);
+    }
+
+    // Display an alert dialog for errors
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
+    public void start(Stage primaryStage) {
+        // Create and display the login portal
+        NewUserUI loginPortal = new NewUserUI();
+        loginPortal.display();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
