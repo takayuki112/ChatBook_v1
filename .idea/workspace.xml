@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Chat Sockets UI Works">
+    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Single Server 100 :)">
+      <change afterPath="$PROJECT_DIR$/Ideas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatbookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatBookUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,26 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/ChatBook-UI_v1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2850575",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/ChatBook-UI_v1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2850575&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\java\user" />
@@ -78,7 +78,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.WelcomeToChatBookUI">
     <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socks.me.Client" />
       <module name="ChatBook-UI_v1" />
@@ -118,8 +118,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WelcomeToChatbookUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="user.welcome.WelcomeToChatbookUI" />
+    <configuration name="WelcomeToChatBookUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.welcome.WelcomeToChatBookUI" />
       <module name="ChatBook-UI_v1" />
       <extension name="coverage">
         <pattern>
@@ -145,7 +145,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WelcomeToChatbookUI" />
+      <item itemvalue="Application.WelcomeToChatBookUI" />
       <item itemvalue="Application.JavaFXClient" />
       <item itemvalue="Application.socks.Client" />
       <item itemvalue="Application.Client" />
@@ -153,7 +153,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WelcomeToChatbookUI" />
+        <item itemvalue="Application.WelcomeToChatBookUI" />
         <item itemvalue="Application.JavaFXClient" />
         <item itemvalue="Application.socks.Client" />
         <item itemvalue="Application.Client" />
@@ -190,7 +190,8 @@
       <workItem from="1699162506832" duration="2282000" />
       <workItem from="1699164803666" duration="4538000" />
       <workItem from="1699181396372" duration="2462000" />
-      <workItem from="1699186703247" duration="3162000" />
+      <workItem from="1699186703247" duration="3210000" />
+      <workItem from="1699190527098" duration="989000" />
     </task>
     <task id="LOCAL-00001" summary="Before Lunch sexsux">
       <option name="closed" value="true" />
@@ -240,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699167718052</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Single Server 100 :)">
+      <option name="closed" value="true" />
+      <created>1699190494123</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699190494123</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +262,8 @@
     <MESSAGE value="All UI &amp; Styling Done, tried client server" />
     <MESSAGE value="SOcks Nots, All else ROcks" />
     <MESSAGE value="Chat Sockets UI Works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chat Sockets UI Works" />
+    <MESSAGE value="Single Server 100 :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Single Server 100 :)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

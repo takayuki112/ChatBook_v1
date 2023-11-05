@@ -1,0 +1,11 @@
+UI Features to Add -
+1. A Logo of Some sort, especially in the new blank screen
+2. Change the Tab Colours to something less contrasty?
+3. Dialog Boxes  CSS
+4. Actual Chat Window - CSS
+5. Enter Key is SEND/NEXT
+6. Size of Windows...
+
+UTILITY FEATURES
+1. Start Server Button
+2. List of Active Servers to choose from

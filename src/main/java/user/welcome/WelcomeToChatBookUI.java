@@ -9,9 +9,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class WelcomeToChatbookUI extends Application {
+public class WelcomeToChatBookUI extends Application {
     public void start(Stage primaryStage) {
-        primaryStage.setTitle("Welcome to Chatbook");
+        primaryStage.setTitle("Welcome to ChatBook");
 
         VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);
@@ -46,8 +46,6 @@ public class WelcomeToChatbookUI extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-
 
     public static void main(String[] args) {
         launch(args);

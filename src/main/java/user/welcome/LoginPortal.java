@@ -69,7 +69,7 @@ public class LoginPortal extends Application {
 
         Button backButton = new Button("Back");
         backButton.setOnAction(e -> {
-            WelcomeToChatbookUI u = new WelcomeToChatbookUI();
+            WelcomeToChatBookUI u = new WelcomeToChatBookUI();
 
             u.start(new Stage());
             loginStage.close();
