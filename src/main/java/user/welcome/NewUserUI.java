@@ -134,7 +134,7 @@ public class NewUserUI extends Application {
 
 
     // Display an alert dialog for errors
-    private void showAlert(String title, String content) {
+    public static void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
         alert.setHeaderText(null);

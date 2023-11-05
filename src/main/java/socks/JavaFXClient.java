@@ -21,6 +21,7 @@ public class JavaFXClient extends Application {
     private String username;
 
 
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -51,8 +52,6 @@ public class JavaFXClient extends Application {
             if (client != null) {
                 client.closeEverything(socket, null, null);
             }
-            System.out.println("Alvida?");
-            Platform.exit();
         });
 
         primaryStage.show();
@@ -66,7 +65,6 @@ public class JavaFXClient extends Application {
             client.listenForMessage();
         } catch (IOException e) {
             e.printStackTrace();
-            System.exit(1);
         }
     }
 

@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="SOcks Nots, All else ROcks">
-      <change afterPath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" afterDir="false" />
+    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Chat Sockets UI Works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClientHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,26 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/ChatBook-UI_v1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2850575&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/HP/IdeaProjects/ChatBook-UI_v1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2850575",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\java\user" />
@@ -85,19 +79,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="BookRetriever" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="user.welcome.BookRetriever" />
-      <module name="ChatBook-UI_v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="user.welcome.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socks.me.Client" />
       <module name="ChatBook-UI_v1" />
@@ -137,6 +118,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WelcomeToChatbookUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.welcome.WelcomeToChatbookUI" />
+      <module name="ChatBook-UI_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="user.welcome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="socks.Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socks.Client" />
       <module name="ChatBook-UI_v1" />
@@ -151,19 +145,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.WelcomeToChatbookUI" />
       <item itemvalue="Application.JavaFXClient" />
       <item itemvalue="Application.socks.Client" />
-      <item itemvalue="Application.BookRetriever" />
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.LoginPortal" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WelcomeToChatbookUI" />
         <item itemvalue="Application.JavaFXClient" />
         <item itemvalue="Application.socks.Client" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.LoginPortal" />
-        <item itemvalue="Application.BookRetriever" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +188,9 @@
       <workItem from="1699157789194" duration="3255000" />
       <workItem from="1699162364907" duration="133000" />
       <workItem from="1699162506832" duration="2282000" />
-      <workItem from="1699164803666" duration="2847000" />
+      <workItem from="1699164803666" duration="4538000" />
+      <workItem from="1699181396372" duration="2462000" />
+      <workItem from="1699186703247" duration="3162000" />
     </task>
     <task id="LOCAL-00001" summary="Before Lunch sexsux">
       <option name="closed" value="true" />
@@ -236,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699160971083</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Chat Sockets UI Works">
+      <option name="closed" value="true" />
+      <created>1699167718051</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699167718052</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +252,23 @@
     <MESSAGE value="UI COMPLETE 5am" />
     <MESSAGE value="All UI &amp; Styling Done, tried client server" />
     <MESSAGE value="SOcks Nots, All else ROcks" />
-    <option name="LAST_COMMIT_MESSAGE" value="SOcks Nots, All else ROcks" />
+    <MESSAGE value="Chat Sockets UI Works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chat Sockets UI Works" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ChatBook_UI_v1$LoginPortal.ic" NAME="LoginPortal Coverage Results" MODIFIED="1699147054841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
