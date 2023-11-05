@@ -1,18 +1,68 @@
-/* styles.css */
+/* Set the background color for the entire application to a dark color */
+.root {
+    -fx-background-color: #99FFFF; /* Dark gray background */
+
+}
+.text {
+    -fx-fill: black; /* Text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+}
+/* Style the window title text */
+.root .root-title .window .labels-text  {
+    -fx-text-fill: white; /* Title text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+    -fx-font-weight: bold; /* Bold font */
+}
+
+/* Style the header text */
+
+/* Style the TabPane */
 .tab-pane {
-    -fx-background-color: #333; /* Set the background color of the TabPane */
+    -fx-background-color: #292929; /* Dark gray background color */
+    -fx-text-background-color: white; /* Tab text color */
+    -fx-tab-min-height: 30;
+    -fx-tab-min-width: 50;
 }
 
-.tab-pane .tab {
-    -fx-background-color: #555; /* Set the background color of tabs */
-    -fx-text-fill: #fff; /* Set the text color of tabs */
+/* Style the tabs */
+.tab {
+    -fx-background-color: #99FFFF; /* Dark gray tab background color */
+    -fx-text-fill: #FFD700; /* Bright yellow tab text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+    -fx-font-weight: bold; /* Bold font */
 }
 
-.tab-pane .tab-button {
-    -fx-background-color: #555; /* Set the background color of tab buttons */
+/* Style the buttons */
+.button {
+    -fx-background-color: #15913C; /* Darker green button background */
+    -fx-text-fill: white; /* Button text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
 
-.tab-pane .tab .button {
-    -fx-background-color: #0077FF; /* Set the background color of buttons within tabs */
-    -fx-text-fill: #fff; /* Set the text color of buttons within tabs */
+/* Style the text fields */
+.text-field {
+    -fx-background-color: #333333; /* Dark gray background */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+}
+
+/* Style the text area */
+.text-area {
+    -fx-background-color: #333333; /* Dark gray background */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+}
+
+/* Style the ListView */
+.list-view {
+    -fx-background-color: #292929; /* Dark gray background color */
+    -fx-text-background-color: white; /* ListView text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+}
+
+/* Style the ListView items */
+.list-cell {
+    -fx-background-color: transparent; /* Make items transparent */
+    -fx-text-fill: white; /* ListView item text color */
+    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }

@@ -78,6 +78,7 @@ public class LoginPortal extends Application {
         layout.getChildren().addAll(headerText, usernameBox, passwordBox, loginButton, backButton);
 
         Scene scene = new Scene(layout, 400, 250); // Adjust the width and height as needed
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         loginStage.setScene(scene);
         loginStage.show();
     }

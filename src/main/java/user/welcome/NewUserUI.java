@@ -84,6 +84,7 @@ public class NewUserUI extends Application {
         layout.getChildren().addAll(headerText, usernameBox, passwordBox, passwordBox2, signUp, backButton);
 
         Scene scene = new Scene(layout, 400, 250); // Adjust the width and height as needed
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         signUpStage.setScene(scene);
         signUpStage.show();
     }

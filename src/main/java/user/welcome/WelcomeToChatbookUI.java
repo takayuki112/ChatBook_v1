@@ -42,6 +42,7 @@ public class WelcomeToChatbookUI extends Application {
         layout.getChildren().addAll(headerText, punchLine, loginButton, createAccountButton);
 
         Scene scene = new Scene(layout, 400, 200); // Adjust the width and height as needed
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

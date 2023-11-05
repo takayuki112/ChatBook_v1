@@ -82,6 +82,7 @@ public class AllChatsUI extends Application implements Serializable {
 
         VBox mainVBox = new VBox(addProfile, ProfileTabPane);
         Scene scene = new Scene(mainVBox, 800, 600); // Increase the size of the screen
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setScene(scene);
         Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
 
