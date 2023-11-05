@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="UI COMPLETE 5am">
+    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="All UI &amp; Styling Done, tried client server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socks/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socks/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatbookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatbookUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager">
     <configuration name="BookRetriever" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="user.welcome.BookRetriever" />
       <module name="ChatBook-UI_v1" />
@@ -156,6 +151,8 @@
       <workItem from="1699138343644" duration="5922000" />
       <workItem from="1699144285952" duration="2421000" />
       <workItem from="1699146726361" duration="2693000" />
+      <workItem from="1699149441493" duration="76000" />
+      <workItem from="1699157789194" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="Before Lunch sexsux">
       <option name="closed" value="true" />
@@ -181,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699143475016</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="All UI &amp; Styling Done, tried client server">
+      <option name="closed" value="true" />
+      <created>1699149482109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699149482109</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +196,8 @@
     <MESSAGE value="Before Lunch sexsux" />
     <MESSAGE value="UI Configuration Saved &amp; Retrieved" />
     <MESSAGE value="UI COMPLETE 5am" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI COMPLETE 5am" />
+    <MESSAGE value="All UI &amp; Styling Done, tried client server" />
+    <option name="LAST_COMMIT_MESSAGE" value="All UI &amp; Styling Done, tried client server" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ChatBook_UI_v1$LoginPortal.ic" NAME="LoginPortal Coverage Results" MODIFIED="1699147054841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

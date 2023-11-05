@@ -1,64 +1,46 @@
 package socks;
-// Java implementation of Server side
-// It contains two classes : Server and ClientHandler
-// Save file as Server.java
 
-import java.io.*;
-import java.util.*;
-import java.net.*;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 
-// Server class
-public class Server
-{
+public class Server {
+    private static final int PORT = 12345;
+    private List<ClientHandler> clients = new ArrayList<>();
 
-    // Vector to store active clients
-    static Vector<ClientHandler> ar = new Vector<>();
+    public static void main(String[] args) {
+        new Server().start();
+    }
 
-    // counter for clients
-    static int i = 0;
+    public void start() {
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+            System.out.println("Server is running on port " + PORT);
 
-    public static void main(String[] args) throws IOException
-    {
-        // server is listening on port 1234
-        ServerSocket ss = new ServerSocket(1234);
-
-        Socket s;
-
-        // running infinite loop for getting
-        // client request
-        while (true)
-        {
-            // Accept the incoming request
-            s = ss.accept();
-
-            System.out.println("New client request received : " + s);
-
-            // obtain input and output streams
-            DataInputStream dis = new DataInputStream(s.getInputStream());
-            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
-
-            System.out.println("Creating a new handler for this client...");
-
-            // Create a new handler object for handling this request.
-            ClientHandler mtch = new ClientHandler(s,"client " + i, dis, dos);
-
-            // Create a new Thread with this object.
-            Thread t = new Thread(mtch);
-
-            System.out.println("Adding this client to active client list");
-
-            // add this client to active clients list
-            ar.add(mtch);
-
-            // start the thread.
-            t.start();
-
-            // increment i for new client.
-            // i is used for naming only, and can be replaced
-            // by any naming scheme
-            i++;
-
+            while (true) {
+                Socket clientSocket = serverSocket.accept();
+                ClientHandler client = new ClientHandler(this, clientSocket);
+                clients.add(client);
+                new Thread(client).start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+    public void broadcastMessage(String message, ClientHandler sender) {
+        for (ClientHandler client : clients) {
+            if (client != sender) {
+                client.sendMessage(message);
+            }
+        }
+    }
+
+    public void removeClient(ClientHandler client) {
+        clients.remove(client);
+    }
 }
+
+
 

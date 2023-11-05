@@ -1,83 +1,40 @@
 package socks;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
+public class ClientHandler implements Runnable {
+    private Socket clientSocket;
+    private Server chatServer;
+    private PrintWriter out;
 
-// ClientHandler class
-class ClientHandler implements Runnable
-{
-    Scanner scn = new Scanner(System.in);
-    private String name;
-    final DataInputStream dis;
-    final DataOutputStream dos;
-    Socket s;
-    boolean isloggedin;
+    public ClientHandler(Server chatServer, Socket clientSocket) {
+        this.clientSocket = clientSocket;
+        this.chatServer = chatServer;
+        try {
+            out = new PrintWriter(clientSocket.getOutputStream(), true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    // constructor
-    public ClientHandler(Socket s, String name,
-                         DataInputStream dis, DataOutputStream dos) {
-        this.dis = dis;
-        this.dos = dos;
-        this.name = name;
-        this.s = s;
-        this.isloggedin=true;
+    public void sendMessage(String message) {
+        out.println(message);
     }
 
     @Override
     public void run() {
-
-        String received;
-        while (true)
-        {
-            try
-            {
-                // receive the string
-                received = dis.readUTF();
-
-                System.out.println(received);
-
-                if(received.equals("logout")){
-                    this.isloggedin=false;
-                    this.s.close();
-                    break;
-                }
-
-                // break the string into message and recipient part
-                StringTokenizer st = new StringTokenizer(received, "#");
-                String MsgToSend = st.nextToken();
-                String recipient = st.nextToken();
-
-                // search for the recipient in the connected devices list.
-                // ar is the vector storing client of active users
-                for (ClientHandler mc : Server.ar)
-                {
-                    // if the recipient is found, write on its
-                    // output stream
-                    if (mc.name.equals(recipient) && mc.isloggedin==true)
-                    {
-                        mc.dos.writeUTF(this.name+" : "+MsgToSend);
-                        break;
-                    }
-                }
-            } catch (IOException e) {
-
-                e.printStackTrace();
+        try (
+                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        ) {
+            String message;
+            while ((message = in.readLine()) != null) {
+                chatServer.broadcastMessage(message, this);
             }
-
-        }
-        try
-        {
-            // closing resources
-            this.dis.close();
-            this.dos.close();
-
-        }catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            chatServer.removeClient(this);
         }
     }
 }

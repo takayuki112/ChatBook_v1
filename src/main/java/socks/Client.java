@@ -1,68 +1,31 @@
 package socks;
-
 import java.io.*;
-import java.net.*;
-import java.util.Scanner;
+import java.net.Socket;
 
-public class Client
-{
-    final static int ServerPort = 1234;
+public class Client {
+    private String serverHost = "localhost";
+    private int serverPort = 12345;
+    private Socket socket;
+    private PrintWriter out;
+    private BufferedReader in;
 
-    public static void main(String args[]) throws UnknownHostException, IOException
-    {
-        Scanner scn = new Scanner(System.in);
+    public Client() {
+        try {
+            socket = new Socket(serverHost, serverPort);
+            out = new PrintWriter(socket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-        // getting localhost ip
-        InetAddress ip = InetAddress.getByName("localhost");
+    public void sendMessage(String message) {
+        out.println(message);
+    }
 
-        // establish the connection
-        Socket s = new Socket(ip, ServerPort);
-
-        // obtaining input and out streams
-        DataInputStream dis = new DataInputStream(s.getInputStream());
-        DataOutputStream dos = new DataOutputStream(s.getOutputStream());
-
-        // sendMessage thread
-        Thread sendMessage = new Thread(new Runnable()
-        {
-            @Override
-            public void run() {
-                while (true) {
-
-                    // read the message to deliver.
-                    String msg = scn.nextLine();
-
-                    try {
-                        // write on the output stream
-                        dos.writeUTF(msg);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-
-        // readMessage thread
-        Thread readMessage = new Thread(new Runnable()
-        {
-            @Override
-            public void run() {
-
-                while (true) {
-                    try {
-                        // read the message sent to this client
-                        String msg = dis.readUTF();
-                        System.out.println(msg);
-                    } catch (IOException e) {
-
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-
-        sendMessage.start();
-        readMessage.start();
-
+    public String receiveMessage() throws IOException {
+        return in.readLine();
     }
 }
+
+
