@@ -9,6 +9,11 @@ import javafx.scene.text.Text;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.geometry.Pos;
+import user.User;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 import static javafx.application.Application.launch;
 
@@ -46,11 +51,17 @@ public class LoginPortal extends Application {
             String username = usernameField.getText();
             String password = passwordField.getText();
 
-            // Implement authentication logic here
-            if (authenticate(username, password)) {
-                // Successful login, close the login window or proceed to the main UI
+            if(! isUsernameExists(username))
+                showInfo("Username Not Found", "Please Go back and create a new account");
+
+            else if (authenticate(username, password)) {
+                System.out.println("Succ");
+                User u = new User(username, password);
+                BookRetriever b = new BookRetriever(u);
+                b.start(new Stage());
                 loginStage.close();
-            } else {
+            }
+            else {
                 // Display an error message for unsuccessful login
                 showAlert("Login Failed", "Invalid username or password.");
             }
@@ -71,9 +82,47 @@ public class LoginPortal extends Application {
         loginStage.show();
     }
 
+    public boolean isUsernameExists(String usernameToCheck) {
+        // Specify the full path to the CSV file
+        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+
+        try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = csvReader.readLine()) != null) {
+                String[] data = line.split(",");
+                String username = data[0]; // Assuming the username is in the first column
+
+                if (username.equals(usernameToCheck)) {
+                    return true; // Username already exists
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false; // Username does not exist
+    }
+
     // Implement your authentication logic here
     private boolean authenticate(String username, String password) {
-        // Check username and password against a database or user data
+        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+
+        try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = csvReader.readLine()) != null) {
+                String[] data = line.split(",");
+                String u = data[0];
+                String p = data[1];
+
+                if (username.equals(u) && password.equals(p)) {
+                    return true;
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
         // Return true for successful authentication, false otherwise
         return false;
     }
@@ -81,6 +130,13 @@ public class LoginPortal extends Application {
     // Display an alert dialog for errors
     private void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+    private void showInfo(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); // Use INFORMATION for success message
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(content);

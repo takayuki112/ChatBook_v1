@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import javafx.geometry.Pos;
 import user.User;
 
+import java.io.*;
+
 import static javafx.application.Application.launch;
 
 public class NewUserUI extends Application {
@@ -57,9 +59,12 @@ public class NewUserUI extends Application {
             String username = usernameField.getText();
             String password = passwordField.getText();
             String password2 = passwordField2.getText();
-
-            if(password2.equals(password)){
+            if(isUsernameExists(username))
+                showAlert("Already Registered", "Username Exists. Please go back & LogIn");
+            else if(password2.equals(password)){
                 createNewUser(username, password);
+                signUpStage.close();
+
             }
             else {
                 showAlert("Password Mismatch", "Passwords do not match.");
@@ -84,10 +89,48 @@ public class NewUserUI extends Application {
     }
 
     // Implement your authentication logic here
+    public boolean isUsernameExists(String usernameToCheck) {
+        // Specify the full path to the CSV file
+        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
 
-    public void createNewUser(String usr, String pwd){
-        User u = new User(usr, pwd);
+        try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = csvReader.readLine()) != null) {
+                String[] data = line.split(",");
+                String username = data[0]; // Assuming the username is in the first column
+
+                if (username.equals(usernameToCheck)) {
+                    return true; // Username already exists
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return false; // Username does not exist
     }
+
+    public void createNewUser(String usr, String pwd) {
+        // Specify the full path to the CSV file
+        String filePath = "C:/Users/HP/IdeaProjects/ChatBook-UI_v1/src/main/resources/UserDataBase/users.csv";
+
+        try (FileWriter csvWriter = new FileWriter(filePath, true)) {
+            csvWriter.append(usr);
+            csvWriter.append(",");
+            csvWriter.append(pwd);
+            csvWriter.append("\n");
+            showSuccessAlert("Success", "User registered successfully.");
+            User u = new User(usr, pwd);
+            LaunchNew l = new LaunchNew(u);
+            l.start(new Stage());
+
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Failed to register user.");
+        }
+    }
+
 
     // Display an alert dialog for errors
     private void showAlert(String title, String content) {
@@ -97,6 +140,14 @@ public class NewUserUI extends Application {
         alert.setContentText(content);
         alert.showAndWait();
     }
+    private void showSuccessAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION); // Use INFORMATION for success message
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+
 
     public void start(Stage primaryStage) {
         // Create and display the login portal

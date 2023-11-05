@@ -28,7 +28,7 @@ public class WelcomeToChatbookUI extends Application {
             // Handle existing user login action
             LoginPortal l = new LoginPortal();
             l.display();
-            primaryStage.close();
+//            primaryStage.close();
         });
 
         Button createAccountButton = new Button("Create New Account");
@@ -36,7 +36,7 @@ public class WelcomeToChatbookUI extends Application {
             // Handle create new account action
             NewUserUI n = new NewUserUI();
             n.start(new Stage());
-            primaryStage.close();
+//            primaryStage.close();
         });
 
         layout.getChildren().addAll(headerText, punchLine, loginButton, createAccountButton);
