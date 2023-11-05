@@ -1,46 +1,52 @@
 package socks;
 
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.net.*;
 
 public class Server {
-    private static final int PORT = 12345;
-    private List<ClientHandler> clients = new ArrayList<>();
+    private ServerSocket serverSocket;
 
-    public static void main(String[] args) {
-        new Server().start();
+    public Server(ServerSocket serverSocket)
+    {
+        this.serverSocket=serverSocket;
+
     }
+    public void  startServer()
+    {
+        try {
+            while(!serverSocket.isClosed())
+            {
+                Socket socket = serverSocket.accept();
+                System.out.println("a new client connected");
+                ClientHandler clientHandler = new ClientHandler(socket);
 
-    public void start() {
-        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-            System.out.println("Server is running on port " + PORT);
-
-            while (true) {
-                Socket clientSocket = serverSocket.accept();
-                ClientHandler client = new ClientHandler(this, clientSocket);
-                clients.add(client);
-                new Thread(client).start();
+                Thread thread = new Thread(clientHandler);
+                thread.start();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            closeServerSocket(); //might have to print stack trace
+        }
+    }
+    public void closeServerSocket()
+    {
+        try {
+            if(serverSocket != null)
+            {
+                serverSocket.close();
+            }
+        }
+        catch (IOException e)
+        {
+            System.out.println("Someone Left?");
         }
     }
 
-    public void broadcastMessage(String message, ClientHandler sender) {
-        for (ClientHandler client : clients) {
-            if (client != sender) {
-                client.sendMessage(message);
-            }
-        }
-    }
-
-    public void removeClient(ClientHandler client) {
-        clients.remove(client);
+    public static void main(String[] args) throws IOException {
+        ServerSocket serverSocket = new ServerSocket(1234);
+        Server server = new Server(serverSocket);
+        server.startServer();
     }
 }
-
-
 

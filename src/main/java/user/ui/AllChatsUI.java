@@ -38,6 +38,7 @@ public class AllChatsUI extends Application implements Serializable {
     public void saveInstance() {
         //String directoryPath = System.getProperty("user.dir") + "src/main/resources/SavedChatUI";
         String directoryPath = "C:/Users/HP/IdeaProjects/ChatBook-UI_v1/src/main/resources/SavedChatUI";
+        //String directoryPath = "/SavedChatUI";
         String id = user.username + "999";
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(directoryPath + "/" + id + ".ser"))) {
             out.writeObject(this);
@@ -51,6 +52,7 @@ public class AllChatsUI extends Application implements Serializable {
     public static AllChatsUI retrieveInstance(String username) {
         //String directoryPath = System.getProperty("user.dir") + "src/main/resources/SavedChatUI";
         String directoryPath = "C:/Users/HP/IdeaProjects/ChatBook-UI_v1/src/main/resources/SavedChatUI";
+        //String directoryPath = "/SavedChatUI";
         String id = username + "999";
         AllChatsUI instance = null;
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(directoryPath + File.separator + id + ".ser"))) {

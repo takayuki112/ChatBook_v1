@@ -9,4 +9,5 @@ module com.example.chatbookui_v1 {
     exports user.welcome;
     exports user.ui;
     exports user.ui.str;
+    exports socks;
 }
