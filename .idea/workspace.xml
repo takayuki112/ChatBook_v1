@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Single Server 100 :)">
-      <change afterPath="$PROJECT_DIR$/Ideas.txt" afterDir="false" />
+    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Added ideas.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ideas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Ideas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatbookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatBookUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatBookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatBookUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +80,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WelcomeToChatBookUI">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Client" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="socks.me.Client" />
       <module name="ChatBook-UI_v1" />
@@ -105,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPortal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="user.welcome.LoginPortal" />
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="socks.Server" />
       <module name="ChatBook-UI_v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="user.welcome.*" />
+          <option name="PATTERN" value="socks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,19 +147,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Server" />
       <item itemvalue="Application.WelcomeToChatBookUI" />
       <item itemvalue="Application.JavaFXClient" />
       <item itemvalue="Application.socks.Client" />
       <item itemvalue="Application.Client" />
-      <item itemvalue="Application.LoginPortal" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.WelcomeToChatBookUI" />
         <item itemvalue="Application.JavaFXClient" />
         <item itemvalue="Application.socks.Client" />
         <item itemvalue="Application.Client" />
-        <item itemvalue="Application.LoginPortal" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +193,13 @@
       <workItem from="1699164803666" duration="4538000" />
       <workItem from="1699181396372" duration="2462000" />
       <workItem from="1699186703247" duration="3210000" />
-      <workItem from="1699190527098" duration="989000" />
+      <workItem from="1699190527098" duration="1023000" />
+      <workItem from="1699192297777" duration="1511000" />
+      <workItem from="1699198918655" duration="2658000" />
+      <workItem from="1699251104853" duration="1151000" />
+      <workItem from="1699264475940" duration="1044000" />
+      <workItem from="1699353048527" duration="5317000" />
+      <workItem from="1699359657886" duration="842000" />
     </task>
     <task id="LOCAL-00001" summary="Before Lunch sexsux">
       <option name="closed" value="true" />
@@ -249,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699190494123</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added ideas.txt">
+      <option name="closed" value="true" />
+      <created>1699191536280</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699191536280</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,18 +279,8 @@
     <MESSAGE value="SOcks Nots, All else ROcks" />
     <MESSAGE value="Chat Sockets UI Works" />
     <MESSAGE value="Single Server 100 :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Single Server 100 :)" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added ideas.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ideas.txt" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

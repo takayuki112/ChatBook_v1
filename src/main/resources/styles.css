@@ -1,11 +1,14 @@
 /* Set the background color for the entire application to a dark color */
 .root {
-    -fx-background-color: #99FFFF; /* Dark gray background */
+    -fx-background-color: #89fd03; /* Dark gray background */
+    -fx-background-image: url('whatsup.jpg');
 
 }
 .text {
-    -fx-fill: black; /* Text color */
-    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+    /*-fx-fill: black; !* Text color *!*/
+    -fx-font-family: "Times New Roman"; /* Use Arial font (replace with your desired font) */
+
+
 }
 /* Style the window title text */
 .root .root-title .window .labels-text  {
@@ -65,4 +68,26 @@
     -fx-background-color: transparent; /* Make items transparent */
     -fx-text-fill: white; /* ListView item text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+}
+
+#punch {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 20;
+    -fx-text-shadow: 5px 5px;
+    -fx-text-fill: white ;
+}
+
+.my-buttons{
+    -fx-font-size: 18;
+    -fx-text-fill: #f8f8f8;
+}
+
+#header{
+    -fx-text-fill: white ;
+}
+
+.labels-newUserUI
+{
+    -fx-text-fill: white;
+    -fx-font-size: 14;
 }

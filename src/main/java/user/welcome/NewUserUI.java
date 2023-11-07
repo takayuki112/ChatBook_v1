@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.layout.HBox;
@@ -12,6 +13,7 @@ import javafx.geometry.Pos;
 import user.User;
 
 import java.io.*;
+
 
 import static javafx.application.Application.launch;
 
@@ -26,12 +28,15 @@ public class NewUserUI extends Application {
 
         // Add a header section
         Text headerText = new Text("Create a new Account - ");
-        headerText.setFont(Font.font(20));
+        headerText.setFont(Font.font(23));
+        headerText.setFill(Color.WHITE);
 
         HBox usernameBox = new HBox();
         usernameBox.setSpacing(10);
         Label usernameLabel = new Label("Username: ");
+        usernameLabel.getStyleClass().add("labels-newUserUI");
         TextField usernameField = new TextField();
+
         usernameField.setPromptText("Enter a username");
         usernameBox.getChildren().addAll(usernameLabel, usernameField);
         usernameBox.setAlignment(Pos.CENTER);
@@ -39,6 +44,7 @@ public class NewUserUI extends Application {
         HBox passwordBox = new HBox();
         passwordBox.setSpacing(10);
         Label passwordLabel = new Label("Password: ");
+        passwordLabel.getStyleClass().add("labels-newUserUI");
         PasswordField passwordField = new PasswordField();
         passwordField.setPromptText("Enter your password");
         passwordBox.getChildren().addAll(passwordLabel, passwordField);
@@ -47,6 +53,7 @@ public class NewUserUI extends Application {
         HBox passwordBox2 = new HBox();
         passwordBox2.setSpacing(10);
         Label passwordLabel2 = new Label("Re-enter : ");
+        passwordLabel2.getStyleClass().add("labels-newUserUI");
         PasswordField passwordField2 = new PasswordField();
         passwordField2.setPromptText("Password Again ");
         passwordBox2.getChildren().addAll(passwordLabel2, passwordField2);
@@ -55,6 +62,7 @@ public class NewUserUI extends Application {
         //ACTION BUTTONS
 
         Button signUp = new Button("Sign Up");
+        signUp.getStyleClass().add("my-buttons");
         signUp.setOnAction(e -> {
             String username = usernameField.getText();
             String password = passwordField.getText();
@@ -74,6 +82,7 @@ public class NewUserUI extends Application {
         });
 
         Button backButton = new Button("Back");
+        backButton.getStyleClass().add("my-buttons");
         backButton.setOnAction(e -> {
             WelcomeToChatBookUI u = new WelcomeToChatBookUI();
 
@@ -81,7 +90,13 @@ public class NewUserUI extends Application {
             signUpStage.close();
         });
 
-        layout.getChildren().addAll(headerText, usernameBox, passwordBox, passwordBox2, signUp, backButton);
+        HBox buttons = new HBox();
+        buttons.setSpacing(20);
+        buttons.getChildren().addAll(signUp, backButton);
+        buttons.setAlignment(Pos.BOTTOM_CENTER);
+
+
+        layout.getChildren().addAll(headerText, usernameBox, passwordBox, passwordBox2, buttons);
 
         Scene scene = new Scene(layout, 400, 250); // Adjust the width and height as needed
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
@@ -92,7 +107,11 @@ public class NewUserUI extends Application {
     // Implement your authentication logic here
     public boolean isUsernameExists(String usernameToCheck) {
         // Specify the full path to the CSV file
-        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+        //String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+
+        String baseDirectory = System.getProperty("user.dir");
+        String relativePath = "/src/main/resources/UserDataBase/users.csv";
+        String filePath = baseDirectory + relativePath;
 
         try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -113,8 +132,9 @@ public class NewUserUI extends Application {
 
     public void createNewUser(String usr, String pwd) {
         // Specify the full path to the CSV file
-        String filePath = "C:/Users/HP/IdeaProjects/ChatBook-UI_v1/src/main/resources/UserDataBase/users.csv";
-
+        String baseDirectory = System.getProperty("user.dir");
+        String relativePath = "/src/main/resources/UserDataBase/users.csv";
+        String filePath = baseDirectory + relativePath;
         try (FileWriter csvWriter = new FileWriter(filePath, true)) {
             csvWriter.append(usr);
             csvWriter.append(",");
