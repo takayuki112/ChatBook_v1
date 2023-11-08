@@ -236,15 +236,24 @@ public class AllChatsUI extends Application implements Serializable {
     }
     private void openChatRoom1(String selectedRoom) {
         //Initialize Server
-//        try {
-//            ServerSocket serverSock = new ServerSocket(1234);
-//            Server server1 = new Server(serverSock);
-//            server1.startServer();
-//            System.out.println("Server Started!");
-//        }
-//        catch (IOException e){
-//            showAlert("Server Failed", "Could not connect to server!");
-//        }
+        try {
+            ServerSocket serverSocket = new ServerSocket(1234);
+            Server server = new Server(serverSocket);
+
+            Thread serverThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    server.startServer();
+                }
+            });
+
+            serverThread.start();
+
+        }
+        catch (IOException e) {
+            // Handle exceptions if necessary
+            e.printStackTrace();
+        }
 
         //Launch ChatUI
         JavaFXClient chatWindow = new JavaFXClient();
