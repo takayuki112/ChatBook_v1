@@ -23,7 +23,6 @@ public class Server {
                 Thread thread = new Thread(clientHandler);
                 thread.start();
             }
-
         }
         catch (IOException e)
         {
@@ -44,28 +43,10 @@ public class Server {
         }
     }
 
-    public static void main(String[] args) {
-        try {
-            ServerSocket serverSocket = new ServerSocket(1234);
-            Server server = new Server(serverSocket);
-
-            Thread serverThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    server.startServer();
-                }
-            });
-
-            serverThread.start();
-
-        }
-        catch (IOException e) {
-            // Handle exceptions if necessary
-            e.printStackTrace();
-        }
-
-        System.out.println("After Starting, print...");
+    public static void main(String[] args) throws IOException {
+        ServerSocket serverSocket = new ServerSocket(1234);
+        Server server = new Server(serverSocket);
+        server.startServer();
     }
-
 }
 

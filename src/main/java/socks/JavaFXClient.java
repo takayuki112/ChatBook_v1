@@ -45,6 +45,8 @@ public class JavaFXClient extends Application {
         borderPane.setRight(sendButton);
 
         Scene scene = new Scene(borderPane, 400, 300);
+
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setScene(scene);
 
         primaryStage.setOnCloseRequest(e -> {
