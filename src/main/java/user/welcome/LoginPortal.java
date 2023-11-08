@@ -85,8 +85,10 @@ public class LoginPortal extends Application {
 
     public boolean isUsernameExists(String usernameToCheck) {
         // Specify the full path to the CSV file
-        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
-
+//        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+        String baseDirectory = System.getProperty("user.dir");
+        String relativePath = "/src/main/resources/UserDataBase/users.csv";
+        String filePath = baseDirectory + relativePath;
         try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = csvReader.readLine()) != null) {
@@ -107,8 +109,10 @@ public class LoginPortal extends Application {
 
     // Implement your authentication logic here
     private boolean authenticate(String username, String password) {
-        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
-
+//        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+        String baseDirectory = System.getProperty("user.dir");
+        String relativePath = "/src/main/resources/UserDataBase/users.csv";
+        String filePath = baseDirectory + relativePath;
         try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = csvReader.readLine()) != null) {

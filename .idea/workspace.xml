@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="UI Updates">
+    <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="Server spawns">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "aaryan",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/HP/IdeaProjects/ChatBook-UI_v1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2850575",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aaryan&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/ChatBook-UI_v1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2850575&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\IdeaProjects\ChatBook-UI_v1\src\main\java\user" />
@@ -82,7 +82,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AllChatsUI">
+  <component name="RunManager">
     <configuration name="AllChatsUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="user.ui.AllChatsUI" />
       <module name="ChatBook-UI_v1" />
@@ -157,10 +157,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AllChatsUI" />
         <item itemvalue="Application.JavaFXClient" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.WelcomeToChatBookUI" />
+        <item itemvalue="Application.AllChatsUI" />
         <item itemvalue="Application.socks.Client" />
       </list>
     </recent_temporary>
@@ -203,7 +203,11 @@
       <workItem from="1699353048527" duration="5317000" />
       <workItem from="1699359657886" duration="2327000" />
       <workItem from="1699375459154" duration="532000" />
-      <workItem from="1699438552104" duration="1604000" />
+      <workItem from="1699438552104" duration="3086000" />
+      <workItem from="1699443282939" duration="221000" />
+      <workItem from="1699444174511" duration="71000" />
+      <workItem from="1699444473863" duration="57000" />
+      <workItem from="1699448088315" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="Before Lunch sexsux">
       <option name="closed" value="true" />
@@ -293,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699375762703</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Server spawns">
+      <option name="closed" value="true" />
+      <created>1699440176619</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699440176619</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +322,8 @@
     <MESSAGE value="Added ideas.txt" />
     <MESSAGE value="Relative File Paths Implemented" />
     <MESSAGE value="UI Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Updates" />
+    <MESSAGE value="Server spawns" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server spawns" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
