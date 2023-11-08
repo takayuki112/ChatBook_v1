@@ -59,6 +59,7 @@ public class LoginPortal extends Application {
                 User u = new User(username, password);
                 BookRetriever b = new BookRetriever(u);
                 b.start(new Stage());
+                System.out.println("Opened UI");
                 loginStage.close();
             }
             else {

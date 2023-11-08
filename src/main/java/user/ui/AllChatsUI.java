@@ -102,8 +102,36 @@ public class AllChatsUI extends Application implements Serializable {
         Scene scene = new Scene(mainVBox, 800, 550); // Increase the size of the screen
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setScene(scene);
-        Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
 
+        //Initialize Server
+        try {
+            ServerSocket serverSocket = new ServerSocket(1234);
+            Server server = new Server(serverSocket);
+
+            Thread serverThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    server.startServer();
+                }
+            });
+
+            Thread shutdownHook = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    server.closeServerSocket();
+                }
+            });
+
+            serverThread.start();
+
+            Runtime.getRuntime().addShutdownHook(shutdownHook);
+        }
+        catch (IOException e) {
+            // Handle exceptions if necessary
+            e.printStackTrace();
+        }
+
+        Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
         primaryStage.show();
     }
 
@@ -235,25 +263,7 @@ public class AllChatsUI extends Application implements Serializable {
         }
     }
     private void openChatRoom1(String selectedRoom) {
-        //Initialize Server
-        try {
-            ServerSocket serverSocket = new ServerSocket(1234);
-            Server server = new Server(serverSocket);
 
-            Thread serverThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    server.startServer();
-                }
-            });
-
-            serverThread.start();
-
-        }
-        catch (IOException e) {
-            // Handle exceptions if necessary
-            e.printStackTrace();
-        }
 
         //Launch ChatUI
         JavaFXClient chatWindow = new JavaFXClient();
