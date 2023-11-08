@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 public class WelcomeToChatBookUI extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Welcome to ChatBook");
+        primaryStage.setMinWidth(550);
+        primaryStage.setMinHeight(350);
 
         VBox layout = new VBox(20);
         layout.setAlignment(Pos.CENTER);
@@ -33,7 +36,7 @@ public class WelcomeToChatBookUI extends Application {
         punchLine.setFill(Color.WHITE);
 
         Button loginButton = new Button("Existing User Login");
-        loginButton.getStyleClass().add("my-buttons");
+        loginButton.getStyleClass().add("my-buttons1");
         loginButton.setOnAction(e -> {
             // Handle existing user login action
             LoginPortal l = new LoginPortal();
@@ -42,7 +45,7 @@ public class WelcomeToChatBookUI extends Application {
         });
 
         Button createAccountButton = new Button("Create New Account");
-        createAccountButton.getStyleClass().add("my-buttons");
+        createAccountButton.getStyleClass().add("my-buttons1");
         createAccountButton.setOnAction(e -> {
             // Handle create new account action
             NewUserUI n = new NewUserUI();
@@ -50,7 +53,14 @@ public class WelcomeToChatBookUI extends Application {
 //            primaryStage.close();
         });
 
-        layout.getChildren().addAll(headerText, punchLine, loginButton, createAccountButton);
+        HBox buttons1 = new HBox();
+        buttons1.setSpacing(20);
+        buttons1.getChildren().addAll(loginButton, createAccountButton);
+        buttons1.setAlignment(Pos.BOTTOM_CENTER);
+
+
+
+        layout.getChildren().addAll(headerText, punchLine, buttons1);
 
         Scene scene = new Scene(layout, 700, 400); // Adjust the width and height as needed
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());

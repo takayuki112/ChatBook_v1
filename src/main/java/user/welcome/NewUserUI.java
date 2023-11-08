@@ -6,6 +6,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -21,18 +23,24 @@ public class NewUserUI extends Application {
     public void display() {
         Stage signUpStage = new Stage();
         signUpStage.setTitle("New User");
+        signUpStage.setMinWidth(550);
+        signUpStage.setMinHeight(350);
+
 
         VBox layout = new VBox();
         layout.setSpacing(10);
         layout.setAlignment(Pos.CENTER);
 
         // Add a header section
-        Text headerText = new Text("Create a new Account - ");
-        headerText.setFont(Font.font(23));
+        Text headerText = new Text("~ Create a new Account ~");
+        headerText.setId("newuser-header");
+        Font font = Font.font("Calibri", FontWeight.NORMAL, FontPosture.REGULAR, 40);
+        headerText.setFont(font);
         headerText.setFill(Color.WHITE);
 
         HBox usernameBox = new HBox();
         usernameBox.setSpacing(10);
+        usernameBox.getStyleClass().add("boxes-newUserUI");
         Label usernameLabel = new Label("Username: ");
         usernameLabel.getStyleClass().add("labels-newUserUI");
         TextField usernameField = new TextField();
@@ -43,8 +51,10 @@ public class NewUserUI extends Application {
 
         HBox passwordBox = new HBox();
         passwordBox.setSpacing(10);
+        passwordBox.getStyleClass().add("boxes-newUserUI");
         Label passwordLabel = new Label("Password: ");
         passwordLabel.getStyleClass().add("labels-newUserUI");
+
         PasswordField passwordField = new PasswordField();
         passwordField.setPromptText("Enter your password");
         passwordBox.getChildren().addAll(passwordLabel, passwordField);
@@ -52,8 +62,10 @@ public class NewUserUI extends Application {
 
         HBox passwordBox2 = new HBox();
         passwordBox2.setSpacing(10);
+        passwordBox2.getStyleClass().add("boxes-newUserUI");
         Label passwordLabel2 = new Label("Re-enter : ");
         passwordLabel2.getStyleClass().add("labels-newUserUI");
+
         PasswordField passwordField2 = new PasswordField();
         passwordField2.setPromptText("Password Again ");
         passwordBox2.getChildren().addAll(passwordLabel2, passwordField2);
@@ -91,6 +103,7 @@ public class NewUserUI extends Application {
         });
 
         HBox buttons = new HBox();
+        buttons.getStyleClass().add("newuser-buttons");
         buttons.setSpacing(20);
         buttons.getChildren().addAll(signUp, backButton);
         buttons.setAlignment(Pos.BOTTOM_CENTER);
@@ -98,7 +111,7 @@ public class NewUserUI extends Application {
 
         layout.getChildren().addAll(headerText, usernameBox, passwordBox, passwordBox2, buttons);
 
-        Scene scene = new Scene(layout, 400, 250); // Adjust the width and height as needed
+        Scene scene = new Scene(layout, 600, 300); // Adjust the width and height as needed
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         signUpStage.setScene(scene);
         signUpStage.show();
