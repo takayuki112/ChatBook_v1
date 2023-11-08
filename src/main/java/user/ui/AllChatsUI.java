@@ -104,10 +104,10 @@ public class AllChatsUI extends Application implements Serializable {
         primaryStage.setScene(scene);
 
         //Initialize Server
+
         try {
             ServerSocket serverSocket = new ServerSocket(1234);
             Server server = new Server(serverSocket);
-
             Thread serverThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -115,24 +115,30 @@ public class AllChatsUI extends Application implements Serializable {
                 }
             });
 
-            Thread shutdownHook = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    server.closeServerSocket();
-                    System.out.println("closeServer called - ");
-                }
-            });
+//            Thread shutdownHook = new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    server.closeServerSocket();
+//                    System.out.println("closeServer called - ");
+//                }
+//            });
 
             serverThread.start();
+//            Runtime.getRuntime().addShutdownHook(shutdownHook);
 
-            Runtime.getRuntime().addShutdownHook(shutdownHook);
+            primaryStage.setOnCloseRequest(e -> {
+                this.saveInstanceOnExit();
+                server.closeServerSocket();
+                serverThread.interrupt();
+                System.out.println("Interrupted Server...");
+            });
         }
         catch (IOException e) {
             // Handle exceptions if necessary
             e.printStackTrace();
         }
 
-        Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
+//        Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
         primaryStage.show();
     }
 

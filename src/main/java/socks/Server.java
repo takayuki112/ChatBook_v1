@@ -65,7 +65,6 @@ public class Server {
             e.printStackTrace();
         }
 
-        System.out.println("After Starting, print...");
     }
 
 }
