@@ -11,6 +11,7 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+// i am gowd
 
 public class WelcomeToChatBookUI extends Application {
     public void start(Stage primaryStage) {
