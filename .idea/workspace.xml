@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="New Accounts Work, chat works, something doesn't close">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/Aaryan999.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/abc999.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ChatBook_UI_v1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatBookUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/WelcomeToChatBookUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BookRetriever">
     <configuration name="BookRetriever" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="user.welcome.BookRetriever" />
       <module name="ChatBook-UI_v1" />

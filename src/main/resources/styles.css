@@ -71,10 +71,11 @@
 }
 
 #punch {
-    -fx-font-family: "Times New Roman";
+    -fx-font-family: "Bradley Hand  ITC";
     -fx-font-size: 20;
     -fx-text-shadow: 5px 5px;
     -fx-text-fill: white ;
+    -fx-translate-y: -30
 }
 
 .my-buttons{
@@ -84,10 +85,32 @@
 
 #header{
     -fx-text-fill: white ;
+    -fx-translate-y: -20;
 }
 
 .labels-newUserUI
 {
     -fx-text-fill: white;
-    -fx-font-size: 14;
+    -fx-font-size: 12;
+    -fx-translate-y: 8;
+}
+
+.boxes-newUserUI{
+    -fx-font-size: 15;
+    -fx-translate-y: 10;
+}
+
+.my-buttons1{
+    -fx-font-size: 17;
+    -fx-text-fill: #f8f8f8;
+
+}
+
+.newuser-buttons{
+    -fx-translate-y: 30;
+
+}
+
+.newuser-header{
+    -fx-font-size: 36;
 }
