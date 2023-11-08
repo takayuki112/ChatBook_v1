@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="New Accounts Work, chat works, something doesn't close">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/ClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/Aaryan999.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/abc999.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="aaryan" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +52,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;aaryan&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;1246am&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/ChatBook-UI_v1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -85,13 +85,26 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="BookRetriever" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="user.welcome.BookRetriever" />
+  <component name="RunManager" selected="Application.AllChatsUI">
+    <configuration name="AllChatsUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="user.ui.AllChatsUI" />
       <module name="ChatBook-UI_v1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="user.welcome.*" />
+          <option name="PATTERN" value="user.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaFXClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="socks.JavaFXClient" />
+      <module name="ChatBook-UI_v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="socks.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,33 +151,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WelcomeToChatBookUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="user.welcome.WelcomeToChatBookUI" />
-      <module name="ChatBook-UI_v1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="user.welcome.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.BookRetriever" />
+      <item itemvalue="Application.AllChatsUI" />
+      <item itemvalue="Application.JavaFXClient (1)" />
+      <item itemvalue="Application.JavaFXClient" />
       <item itemvalue="Application.LoginPortal" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.WelcomeToChatBookUI" />
-      <item itemvalue="Application.JavaFXClient" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AllChatsUI" />
         <item itemvalue="Application.LoginPortal" />
-        <item itemvalue="Application.WelcomeToChatBookUI" />
-        <item itemvalue="Application.BookRetriever" />
-        <item itemvalue="Application.JavaFXClient" />
+        <item itemvalue="Application.JavaFXClient (1)" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.JavaFXClient" />
       </list>
     </recent_temporary>
   </component>
@@ -352,7 +352,39 @@
       <option name="project" value="LOCAL" />
       <updated>1699453048174</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="New Accounts Work, chat works, something doesn't close">
+      <option name="closed" value="true" />
+      <created>1699464642815</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699464642815</updated>
+    </task>
+    <task id="LOCAL-00019" summary="New Accounts Work, chat works, something doesn't close">
+      <option name="closed" value="true" />
+      <created>1699466621505</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699466621505</updated>
+    </task>
+    <task id="LOCAL-00020" summary="New Accounts Work, chat works, something doesn't close">
+      <option name="closed" value="true" />
+      <created>1699470919999</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699470919999</updated>
+    </task>
+    <task id="LOCAL-00021" summary="New Accounts Work, chat works, something doesn't close">
+      <option name="closed" value="true" />
+      <created>1699470926454</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699470926454</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,6 +413,16 @@
           <properties class="java.io.EOFException" package="java.io" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -389,10 +431,10 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$LoginPortal.ic" NAME="LoginPortal Coverage Results" MODIFIED="1699147054841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$BookRetriever.ic" NAME="BookRetriever Coverage Results" MODIFIED="1699147041332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>user.welcome.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$BookRetriever.ic" NAME="BookRetriever Coverage Results" MODIFIED="1699147041332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$LoginPortal.ic" NAME="LoginPortal Coverage Results" MODIFIED="1699147054841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>user.welcome.*</FILTER>
     </SUITE>
   </component>

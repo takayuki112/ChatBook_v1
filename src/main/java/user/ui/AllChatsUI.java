@@ -87,6 +87,7 @@ public class AllChatsUI extends Application implements Serializable {
         primaryStage.setTitle("ChatBook UI");
 
         TabPane ProfileTabPane = createVerticalTabPane();  //used once to make the pane.
+        ProfileTabPane.getStyleClass().add("profilePane");
 
         //ADD Profiles in the list previously...
         for(Profile p : profiles){

@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -34,8 +35,16 @@ public class JavaFXClient extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Chat Client");
         primaryStage.setMinWidth(415);
+        primaryStage.setMinHeight(600);
+        primaryStage.setMaxWidth(415);
 
         chatMessagesTextArea = new TextArea();
+        chatMessagesTextArea.getStyleClass().add("client-chatbg");
+        Image backgroundImage = new Image("/whatsup.jpg");
+
+
+
+        chatMessagesTextArea.setMinHeight(500);
         chatMessagesTextArea.setEditable(false);
 
         messageTextField = new TextField();
@@ -55,7 +64,9 @@ public class JavaFXClient extends Application {
 //        borderPane.setRight(sendButton);
 
 //        Scene scene = new Scene(borderPane, 400, 300);
-        Scene scene = new Scene(all, 400, 300);
+        Scene scene = new Scene(all, 400, 450);
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
+
         primaryStage.setScene(scene);
 
         primaryStage.setOnCloseRequest(e -> {
@@ -93,7 +104,7 @@ public class JavaFXClient extends Application {
         Platform.runLater(() -> chatMessagesTextArea.appendText(String.valueOf(m1)));
     }
 
-//    public void displayMyMessage(String message) {
+    //    public void displayMyMessage(String message) {
 //        String m1 = "You: " + message + "\n";
 //        Platform.runLater(() -> {
 //            Text sentText = new Text(m1);

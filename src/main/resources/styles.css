@@ -21,7 +21,7 @@
 
 /* Style the TabPane */
 .tab-pane {
-    -fx-background-color: #292929; /* Dark gray background color */
+    -fx-background-color: RED; /* Dark gray background color */
     -fx-text-background-color: white; /* Tab text color */
     -fx-tab-min-height: 30;
     -fx-tab-min-width: 50;
@@ -58,14 +58,14 @@
 
 /* Style the ListView */
 .list-view {
-    -fx-background-color: #292929; /* Dark gray background color */
+    -fx-background-color: rgba(0,0,0,0); /* Dark gray background color */
     -fx-text-background-color: white; /* ListView text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
 
 /* Style the ListView items */
 .list-cell {
-    -fx-background-color: transparent; /* Make items transparent */
+    -fx-background-color: red; /* Make items transparent */
     -fx-text-fill: white; /* ListView item text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
@@ -90,4 +90,24 @@
 {
     -fx-text-fill: white;
     -fx-font-size: 14;
+}
+
+.tabpane-allchats{
+    -fx-background-color: rgba(2, 0, 15, 0.3);
+}
+
+.allchats-pane{
+    -fx-background-color : rgbc(0,0,0,0.3);
+}
+
+.set-button{
+   -fx-translate-y : 10;
+}
+
+.client-chatbg{
+    -fx-control-inner-background: rgba(25, 77, 61,0.9);
+
+}
+.profilepane{
+    -fx-background-color: #FF5733;
 }
