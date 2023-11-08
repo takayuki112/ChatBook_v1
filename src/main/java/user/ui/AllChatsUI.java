@@ -119,6 +119,7 @@ public class AllChatsUI extends Application implements Serializable {
                 @Override
                 public void run() {
                     server.closeServerSocket();
+                    System.out.println("closeServer called - ");
                 }
             });
 

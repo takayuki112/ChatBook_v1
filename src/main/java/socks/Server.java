@@ -36,6 +36,7 @@ public class Server {
             if(serverSocket != null)
             {
                 serverSocket.close();
+
             }
         }
         catch (IOException e)
