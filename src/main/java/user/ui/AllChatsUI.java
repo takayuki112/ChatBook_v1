@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import socks.JavaFXClient;
@@ -144,6 +145,7 @@ public class AllChatsUI extends Application implements Serializable {
 
     private TabPane createVerticalTabPane() {
         TabPane verticalTabPane = new TabPane();
+        verticalTabPane.getStyleClass().add("tabpane-allchats");
         verticalTabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.ALL_TABS); // Disable closing tabs
         verticalTabPane.setSide(Side.LEFT);
         verticalTabPane.setTabMinHeight(30);
@@ -176,6 +178,7 @@ public class AllChatsUI extends Application implements Serializable {
         //THE UI STUFF ~~
         Tab profileTab = new Tab(profileName);
         TabPane folderPane = new TabPane(); // Create a Folders Pane for each Profile
+        folderPane.getStyleClass().add("allchats-pane");
         Button addSubTabButton = new Button("Add Folder");
 
         //ADD FOLDERS previous session
