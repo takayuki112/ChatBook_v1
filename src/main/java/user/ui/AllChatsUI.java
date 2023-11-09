@@ -218,9 +218,12 @@ public class AllChatsUI extends Application implements Serializable {
         //FOLDER UI ~~
         Tab subTab = new Tab(folderName);
 
+        subTab.getStyleClass().add("allchats-pane");
+
         // Create a ListView to display content within the sub tab
         ListView<Button> contentListView = new ListView<>();
         contentListView.setPrefHeight(900); // Increase the height
+        contentListView.getStyleClass().add("allchats-pane");
 
         //ADD PREV Buttons~
         for(ChatButton c:f.chats){
@@ -229,7 +232,7 @@ public class AllChatsUI extends Application implements Serializable {
 
         //CREATE NEW CHATS ~
         TextField newContentTextField = new TextField();
-        newContentTextField.setMinSize(800, 23);
+        newContentTextField.setMinSize(400, 23);
         newContentTextField.setPromptText("Enter Name Of Chat To Be Added...");
 
         Button addContentButton = new Button("Create New Chat");
@@ -240,12 +243,12 @@ public class AllChatsUI extends Application implements Serializable {
                 addChatButtonToSubTab(contentListView, chatName);
                 newContentTextField.clear();
 
-                //Add to f.chats
+                //Add to f.chats for recontruction
                 f.chats.add(new ChatButton(chatName));
             }
         });
         newContentTextField.clear();
-        HBox newChat = new HBox(addContentButton, newContentTextField);
+        HBox newChat = new HBox(newContentTextField, addContentButton);
         VBox subTabContent = new VBox(contentListView, newChat );
         subTab.setContent(subTabContent);
         subTabPane.getTabs().add(subTab);
@@ -258,6 +261,7 @@ public class AllChatsUI extends Application implements Serializable {
         if (!chatName.isEmpty()) {
             Button chatButton = new Button(chatName);
             contentListView.getItems().add(chatButton);
+            contentListView.getStyleClass().add("allchats-pane");
 
             chatButton.setOnAction(e -> {
                 //DIALOG BOX - To open a New Chat -

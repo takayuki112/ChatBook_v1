@@ -65,7 +65,7 @@
 
 /* Style the ListView items */
 .list-cell {
-    -fx-background-color: red; /* Make items transparent */
+    -fx-background-color : rgba(0,0,0,0.1);
     -fx-text-fill: white; /* ListView item text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
@@ -97,7 +97,7 @@
 }
 
 .allchats-pane{
-    /*-fx-background-color : rgbc(0,0,0,0.3);*/
+    -fx-background-color : rgba(0,0,0,0.1);
 }
 
 .set-button{
