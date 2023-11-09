@@ -7,10 +7,7 @@
     <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="New Accounts Work, chat works, something doesn't close">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/n999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/n999.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +82,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AllChatsUI">
+  <component name="RunManager">
     <configuration name="AllChatsUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="user.ui.AllChatsUI" />
       <module name="ChatBook-UI_v1" />
@@ -215,6 +212,7 @@
       <workItem from="1699451104849" duration="303000" />
       <workItem from="1699451806344" duration="1263000" />
       <workItem from="1699459691936" duration="2256000" />
+      <workItem from="1699498803038" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="Before Lunch sexsux">
       <option name="closed" value="true" />
@@ -390,6 +388,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before Lunch sexsux" />
     <MESSAGE value="UI Configuration Saved &amp; Retrieved" />
@@ -414,11 +423,6 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/socks/JavaFXClient.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java</url>
           <line>89</line>
           <option name="timeStamp" value="3" />
@@ -431,10 +435,10 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$BookRetriever.ic" NAME="BookRetriever Coverage Results" MODIFIED="1699147041332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$LoginPortal.ic" NAME="LoginPortal Coverage Results" MODIFIED="1699147054841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>user.welcome.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$LoginPortal.ic" NAME="LoginPortal Coverage Results" MODIFIED="1699147054841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/ChatBook_UI_v1$BookRetriever.ic" NAME="BookRetriever Coverage Results" MODIFIED="1699147041332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>user.welcome.*</FILTER>
     </SUITE>
   </component>
