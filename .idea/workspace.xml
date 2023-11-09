@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="added css to AllChatsUI.java and JavaFXClient.java">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/ui/AllChatsUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/LoginPortal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/user/welcome/NewUserUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/0999.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/n999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/n999.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +82,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WelcomeToChatBookUI">
+  <component name="RunManager" selected="Application.JavaFXClient (1)">
     <configuration name="AllChatsUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="user.ui.AllChatsUI" />
       <module name="ChatBook-UI_v1" />
@@ -162,11 +157,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaFXClient (1)" />
         <item itemvalue="Application.WelcomeToChatBookUI" />
         <item itemvalue="Application.LoginPortal" />
         <item itemvalue="Application.NewUserUI" />
         <item itemvalue="Application.AllChatsUI" />
-        <item itemvalue="Application.JavaFXClient (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -396,7 +391,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699499217300</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added css to AllChatsUI.java and JavaFXClient.java">
+      <option name="closed" value="true" />
+      <created>1699506311526</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699506311526</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added css to AllChatsUI.java and JavaFXClient.java">
+      <option name="closed" value="true" />
+      <created>1699506321565</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699506321565</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +439,8 @@
     <MESSAGE value="Server spawns, Login &amp; Chat Works, relative paths" />
     <MESSAGE value="New Accounts Work, chat works, something doesn't close" />
     <MESSAGE value="morning" />
-    <option name="LAST_COMMIT_MESSAGE" value="morning" />
+    <MESSAGE value="added css to AllChatsUI.java and JavaFXClient.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css to AllChatsUI.java and JavaFXClient.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
