@@ -23,24 +23,29 @@
 .tab-pane {
     -fx-background-color: RED; /* Dark gray background color */
     -fx-text-background-color: white; /* Tab text color */
+
     -fx-tab-min-height: 30;
     -fx-tab-min-width: 50;
 }
 
 /* Style the tabs */
 .tab {
-    -fx-background-color: #99FFFF; /* Dark gray tab background color */
-    -fx-text-fill: #FFD700; /* Bright yellow tab text color */
-    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+
+    -fx-background-color:aliceblue
+    -fx-text-fill: white; /* Set tab text color to white */
+    -fx-text-background-color:WHITE;
+    -fx-font-family: "Calibri"; /* Use Arial font (replace with your desired font) */
+    -fx-font-size:13;
     -fx-font-weight: bold; /* Bold font */
 }
 
 /* Style the buttons */
 .button {
     -fx-background-color: #15913C; /* Darker green button background */
-    -fx-text-fill: white; /* Button text color */
+    -fx-text-fill: WHITE; /* Button text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
+
 
 /* Style the text fields */
 .text-field {
@@ -61,6 +66,7 @@
     -fx-background-color: rgba(0,0,0,0); /* Dark gray background color */
     -fx-text-background-color: white; /* ListView text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+
 }
 
 /* Style the ListView items */
@@ -80,6 +86,7 @@
 .my-buttons{
     -fx-font-size: 18;
     -fx-text-fill: #f8f8f8;
+    -fx-translate-y: 10;
 }
 
 #header{
@@ -90,6 +97,7 @@
 {
     -fx-text-fill: white;
     -fx-font-size: 14;
+    -fx-font-family: "Calibri";
 }
 
 .tabpane-allchats{
@@ -98,6 +106,10 @@
 
 .allchats-pane{
     -fx-background-color : rgba(0,0,0,0.1);
+}
+
+#profiletab{
+    -fx-text-fill:WHITE;
 }
 
 .set-button{
@@ -111,3 +123,10 @@
 .profilepane{
     -fx-background-color: #FF5733;
 }
+
+.text{
+    -fx-text-fill: WHITE;
+}
+
+
+

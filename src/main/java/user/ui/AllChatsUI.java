@@ -85,6 +85,8 @@ public class AllChatsUI extends Application implements Serializable {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("ChatBook UI");
+        primaryStage.setMinWidth(800);
+        primaryStage.setMinHeight(580);
 
         TabPane ProfileTabPane = createVerticalTabPane();  //used once to make the pane.
         ProfileTabPane.getStyleClass().add("profilePane");
@@ -104,6 +106,7 @@ public class AllChatsUI extends Application implements Serializable {
         Scene scene = new Scene(mainVBox, 800, 550); // Increase the size of the screen
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setScene(scene);
+
 
         //Initialize Server
 
@@ -178,6 +181,7 @@ public class AllChatsUI extends Application implements Serializable {
 
         //THE UI STUFF ~~
         Tab profileTab = new Tab(profileName);
+
         TabPane folderPane = new TabPane(); // Create a Folders Pane for each Profile
         folderPane.getStyleClass().add("allchats-pane");
         Button addSubTabButton = new Button("Add Folder");
@@ -232,9 +236,9 @@ public class AllChatsUI extends Application implements Serializable {
 
         //CREATE NEW CHATS ~
         TextField newContentTextField = new TextField();
-        newContentTextField.setMinSize(400, 23);
+        newContentTextField.setMinSize(500, 23);
         newContentTextField.setPromptText("Enter Name Of Chat To Be Added...");
-
+//        newContentTextField.getStyleClass().add("typehere-allchats");
         Button addContentButton = new Button("Create New Chat");
 
         addContentButton.setOnAction(e -> {

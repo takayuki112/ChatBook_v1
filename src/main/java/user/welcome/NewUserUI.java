@@ -6,6 +6,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -21,14 +23,17 @@ public class NewUserUI extends Application {
     public void display() {
         Stage signUpStage = new Stage();
         signUpStage.setTitle("New User");
+        signUpStage.setMinWidth(500);
+        signUpStage.setMinHeight(300);
 
         VBox layout = new VBox();
         layout.setSpacing(10);
         layout.setAlignment(Pos.CENTER);
 
         // Add a header section
-        Text headerText = new Text("Create a new Account - ");
-        headerText.setFont(Font.font(23));
+        Text headerText = new Text("~ Create a new Account ~");
+        Font font = Font.font("Calibri", FontWeight.NORMAL, FontPosture.REGULAR, 40);
+        headerText.setFont(font);
         headerText.setFill(Color.WHITE);
 
         HBox usernameBox = new HBox();
@@ -91,6 +96,7 @@ public class NewUserUI extends Application {
         });
 
         HBox buttons = new HBox();
+        buttons.getStyleClass().add("my-buttons");
         buttons.setSpacing(20);
         buttons.getChildren().addAll(signUp, backButton);
         buttons.setAlignment(Pos.BOTTOM_CENTER);
