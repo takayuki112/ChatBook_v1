@@ -38,10 +38,12 @@ public class JavaFXClient extends Application {
         primaryStage.setMinHeight(600);
         primaryStage.setMaxWidth(415);
 
+        Label prompt = new Label("Enter username to enter chat - ");
+        prompt.setId("chatui-prompt");
+
         chatMessagesTextArea = new TextArea();
         chatMessagesTextArea.getStyleClass().add("client-chatbg");
         Image backgroundImage = new Image("/whatsup.jpg");
-
 
 
         chatMessagesTextArea.setMinHeight(500);
@@ -53,9 +55,12 @@ public class JavaFXClient extends Application {
 
         Button sendButton = new Button("Send");
         sendButton.getStyleClass().add("send-button");
-        sendButton.setOnAction(e -> sendMessage());
+        sendButton.setOnAction(e -> {
+            sendMessage();
+            prompt.setVisible(false);
+        });
         HBox bottombox = new HBox(messageTextField, sendButton);
-        VBox all = new VBox(chatMessagesTextArea, bottombox);
+        VBox all = new VBox(prompt, chatMessagesTextArea, bottombox);
 
 //
 //        BorderPane borderPane = new BorderPane();

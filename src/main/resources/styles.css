@@ -31,7 +31,7 @@
 /* Style the tabs */
 .tab {
 
-    -fx-background-color:aliceblue
+    -fx-background-color:aliceblue;
     -fx-text-fill: white; /* Set tab text color to white */
     -fx-text-background-color:WHITE;
     -fx-font-family: "Calibri"; /* Use Arial font (replace with your desired font) */
@@ -128,5 +128,8 @@
     -fx-text-fill: WHITE;
 }
 
-
+#chatui-prompt{
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+}
 
