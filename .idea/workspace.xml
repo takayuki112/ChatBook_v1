@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ChatBook-UI_v1:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2428c989-b3a9-438b-901c-43e4fe15e3ce" name="Changes" comment="added css to AllChatsUI.java and JavaFXClient.java">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SavedChatUI/n999.ser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SavedChatUI/n999.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UserDataBase/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +58,10 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2850575",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,7 +86,7 @@
       <recent name="com.example.chatbookui_v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JavaFXClient (1)">
+  <component name="RunManager" selected="Application.WelcomeToChatBookUI">
     <configuration name="AllChatsUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="user.ui.AllChatsUI" />
       <module name="ChatBook-UI_v1" />
@@ -157,8 +161,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JavaFXClient (1)" />
         <item itemvalue="Application.WelcomeToChatBookUI" />
+        <item itemvalue="Application.JavaFXClient (1)" />
         <item itemvalue="Application.LoginPortal" />
         <item itemvalue="Application.NewUserUI" />
         <item itemvalue="Application.AllChatsUI" />
@@ -407,7 +411,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699506321565</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added css to AllChatsUI.java and JavaFXClient.java">
+      <option name="closed" value="true" />
+      <created>1699509195617</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699509195617</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added css to AllChatsUI.java and JavaFXClient.java">
+      <option name="closed" value="true" />
+      <created>1699509206966</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699509206966</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
