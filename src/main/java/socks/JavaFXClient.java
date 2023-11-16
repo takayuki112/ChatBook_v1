@@ -4,7 +4,12 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,24 +34,44 @@ public class JavaFXClient extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Chat Client");
+        primaryStage.setMinWidth(415);
+        primaryStage.setMinHeight(600);
+        primaryStage.setMaxWidth(415);
+
+        Label prompt = new Label("Enter username to enter chat - ");
+        prompt.setId("chatui-prompt");
 
         chatMessagesTextArea = new TextArea();
+        chatMessagesTextArea.getStyleClass().add("client-chatbg");
+        Image backgroundImage = new Image("/whatsup.jpg");
+
+
+        chatMessagesTextArea.setMinHeight(500);
         chatMessagesTextArea.setEditable(false);
 
         messageTextField = new TextField();
+        messageTextField.setMinWidth(355);
         messageTextField.setPromptText("Type your message...");
 
         Button sendButton = new Button("Send");
-        sendButton.setOnAction(e -> sendMessage());
+        sendButton.getStyleClass().add("send-button");
+        sendButton.setOnAction(e -> {
+            sendMessage();
+            prompt.setVisible(false);
+        });
+        HBox bottombox = new HBox(messageTextField, sendButton);
+        VBox all = new VBox(prompt, chatMessagesTextArea, bottombox);
 
-        BorderPane borderPane = new BorderPane();
-        borderPane.setCenter(new ScrollPane(chatMessagesTextArea));
-        borderPane.setBottom(messageTextField);
-        borderPane.setRight(sendButton);
+//
+//        BorderPane borderPane = new BorderPane();
+//        borderPane.setCenter(new ScrollPane(chatMessagesTextArea));
+//        borderPane.setBottom(messageTextField);
+//        borderPane.setRight(sendButton);
 
-        Scene scene = new Scene(borderPane, 400, 300);
-
+//        Scene scene = new Scene(borderPane, 400, 300);
+        Scene scene = new Scene(all, 400, 450);
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
+
         primaryStage.setScene(scene);
 
         primaryStage.setOnCloseRequest(e -> {
@@ -75,11 +100,25 @@ public class JavaFXClient extends Application {
         if (!messageToSend.isEmpty()) {
             client.sendMessageFromUI(messageToSend);
             messageTextField.clear();
-            displayMessage(messageToSend);
+            displayMyMessage(messageToSend);
         }
     }
+    public void displayMyMessage(String message) { //what i sent
+        String m1 = message + "\n";
 
-    public void displayMessage(String message) {
+        Platform.runLater(() -> chatMessagesTextArea.appendText(String.valueOf(m1)));
+    }
+
+    //    public void displayMyMessage(String message) {
+//        String m1 = "You: " + message + "\n";
+//        Platform.runLater(() -> {
+//            Text sentText = new Text(m1);
+//            sentText.setFill(Color.BLUE); // Set color for sent messages
+//            chatMessagesTextArea.appendText(sentText);
+//        });
+//    }
+    public void displayMessage(String message) { //what i received
+
         Platform.runLater(() -> chatMessagesTextArea.appendText(message + "\n"));
     }
 

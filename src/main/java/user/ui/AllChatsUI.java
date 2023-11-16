@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import socks.JavaFXClient;
@@ -84,8 +85,11 @@ public class AllChatsUI extends Application implements Serializable {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("ChatBook UI");
+        primaryStage.setMinWidth(800);
+        primaryStage.setMinHeight(580);
 
         TabPane ProfileTabPane = createVerticalTabPane();  //used once to make the pane.
+        ProfileTabPane.getStyleClass().add("profilePane");
 
         //ADD Profiles in the list previously...
         for(Profile p : profiles){
@@ -102,13 +106,50 @@ public class AllChatsUI extends Application implements Serializable {
         Scene scene = new Scene(mainVBox, 800, 550); // Increase the size of the screen
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         primaryStage.setScene(scene);
-        Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
 
+
+        //Initialize Server
+
+        try {
+            ServerSocket serverSocket = new ServerSocket(1234);
+            Server server = new Server(serverSocket);
+            Thread serverThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    server.startServer();
+                }
+            });
+
+//            Thread shutdownHook = new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    server.closeServerSocket();
+//                    System.out.println("closeServer called - ");
+//                }
+//            });
+
+            serverThread.start();
+//            Runtime.getRuntime().addShutdownHook(shutdownHook);
+
+            primaryStage.setOnCloseRequest(e -> {
+                this.saveInstanceOnExit();
+                server.closeServerSocket();
+                serverThread.interrupt();
+                System.out.println("Interrupted Server...");
+            });
+        }
+        catch (IOException e) {
+            // Handle exceptions if necessary
+            e.printStackTrace();
+        }
+
+//        Runtime.getRuntime().addShutdownHook(new Thread(this::saveInstanceOnExit));
         primaryStage.show();
     }
 
     private TabPane createVerticalTabPane() {
         TabPane verticalTabPane = new TabPane();
+        verticalTabPane.getStyleClass().add("tabpane-allchats");
         verticalTabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.ALL_TABS); // Disable closing tabs
         verticalTabPane.setSide(Side.LEFT);
         verticalTabPane.setTabMinHeight(30);
@@ -140,7 +181,9 @@ public class AllChatsUI extends Application implements Serializable {
 
         //THE UI STUFF ~~
         Tab profileTab = new Tab(profileName);
+
         TabPane folderPane = new TabPane(); // Create a Folders Pane for each Profile
+        folderPane.getStyleClass().add("allchats-pane");
         Button addSubTabButton = new Button("Add Folder");
 
         //ADD FOLDERS previous session
@@ -179,9 +222,12 @@ public class AllChatsUI extends Application implements Serializable {
         //FOLDER UI ~~
         Tab subTab = new Tab(folderName);
 
+        subTab.getStyleClass().add("allchats-pane");
+
         // Create a ListView to display content within the sub tab
         ListView<Button> contentListView = new ListView<>();
         contentListView.setPrefHeight(900); // Increase the height
+        contentListView.getStyleClass().add("allchats-pane");
 
         //ADD PREV Buttons~
         for(ChatButton c:f.chats){
@@ -190,9 +236,9 @@ public class AllChatsUI extends Application implements Serializable {
 
         //CREATE NEW CHATS ~
         TextField newContentTextField = new TextField();
-        newContentTextField.setMinSize(800, 23);
+        newContentTextField.setMinSize(500, 23);
         newContentTextField.setPromptText("Enter Name Of Chat To Be Added...");
-
+//        newContentTextField.getStyleClass().add("typehere-allchats");
         Button addContentButton = new Button("Create New Chat");
 
         addContentButton.setOnAction(e -> {
@@ -201,12 +247,12 @@ public class AllChatsUI extends Application implements Serializable {
                 addChatButtonToSubTab(contentListView, chatName);
                 newContentTextField.clear();
 
-                //Add to f.chats
+                //Add to f.chats for recontruction
                 f.chats.add(new ChatButton(chatName));
             }
         });
         newContentTextField.clear();
-        HBox newChat = new HBox(addContentButton, newContentTextField);
+        HBox newChat = new HBox(newContentTextField, addContentButton);
         VBox subTabContent = new VBox(contentListView, newChat );
         subTab.setContent(subTabContent);
         subTabPane.getTabs().add(subTab);
@@ -219,6 +265,7 @@ public class AllChatsUI extends Application implements Serializable {
         if (!chatName.isEmpty()) {
             Button chatButton = new Button(chatName);
             contentListView.getItems().add(chatButton);
+            contentListView.getStyleClass().add("allchats-pane");
 
             chatButton.setOnAction(e -> {
                 //DIALOG BOX - To open a New Chat -
@@ -235,16 +282,7 @@ public class AllChatsUI extends Application implements Serializable {
         }
     }
     private void openChatRoom1(String selectedRoom) {
-        //Initialize Server
-//        try {
-//            ServerSocket serverSock = new ServerSocket(1234);
-//            Server server1 = new Server(serverSock);
-//            server1.startServer();
-//            System.out.println("Server Started!");
-//        }
-//        catch (IOException e){
-//            showAlert("Server Failed", "Could not connect to server!");
-//        }
+
 
         //Launch ChatUI
         JavaFXClient chatWindow = new JavaFXClient();

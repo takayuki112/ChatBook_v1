@@ -11,7 +11,7 @@ public class BookRetriever extends Application {
     boolean blank;
 
     public BookRetriever(){
-        this.usr = new User("r", "0");
+        this.usr = new User("Aaryan", "atp");
         blank = false;
     }
     public BookRetriever(User usr){

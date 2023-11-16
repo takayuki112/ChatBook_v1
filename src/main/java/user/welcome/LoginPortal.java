@@ -4,7 +4,10 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -21,18 +24,23 @@ public class LoginPortal extends Application {
     public void display() {
         Stage loginStage = new Stage();
         loginStage.setTitle("Login");
+        loginStage.setMinWidth(500);
+        loginStage.setMinHeight(300);
 
         VBox layout = new VBox();
         layout.setSpacing(10);
         layout.setAlignment(Pos.CENTER);
 
         // Add a header section
-        Text headerText = new Text("Login Portal");
-        headerText.setFont(Font.font(20));
+        Text headerText = new Text("~ Login Portal ~");
+        Font font = Font.font("Calibri", FontWeight.NORMAL, FontPosture.REGULAR, 40);
+        headerText.setFont(font);
+        headerText.setFill(Color.WHITE);
 
         HBox usernameBox = new HBox();
         usernameBox.setSpacing(10);
         Label usernameLabel = new Label("Username: ");
+        usernameLabel.getStyleClass().add("labels-newUserUI");
         TextField usernameField = new TextField();
         usernameField.setPromptText("Enter your username");
         usernameBox.getChildren().addAll(usernameLabel, usernameField);
@@ -41,6 +49,7 @@ public class LoginPortal extends Application {
         HBox passwordBox = new HBox();
         passwordBox.setSpacing(10);
         Label passwordLabel = new Label("Password: ");
+        passwordLabel.getStyleClass().add("labels-newUserUI");
         PasswordField passwordField = new PasswordField();
         passwordField.setPromptText("Enter your password");
         passwordBox.getChildren().addAll(passwordLabel, passwordField);
@@ -59,6 +68,7 @@ public class LoginPortal extends Application {
                 User u = new User(username, password);
                 BookRetriever b = new BookRetriever(u);
                 b.start(new Stage());
+                System.out.println("Opened UI");
                 loginStage.close();
             }
             else {
@@ -75,7 +85,12 @@ public class LoginPortal extends Application {
             loginStage.close();
         });
 
-        layout.getChildren().addAll(headerText, usernameBox, passwordBox, loginButton, backButton);
+        HBox loginbuttons = new HBox(loginButton,backButton);
+        loginbuttons.setSpacing(20);
+        loginbuttons.setAlignment(Pos.BOTTOM_CENTER);
+        loginbuttons.getStyleClass().add("my-buttons");
+
+        layout.getChildren().addAll(headerText, usernameBox, passwordBox, loginbuttons);
 
         Scene scene = new Scene(layout, 400, 250); // Adjust the width and height as needed
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
@@ -85,8 +100,10 @@ public class LoginPortal extends Application {
 
     public boolean isUsernameExists(String usernameToCheck) {
         // Specify the full path to the CSV file
-        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
-
+//        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+        String baseDirectory = System.getProperty("user.dir");
+        String relativePath = "/src/main/resources/UserDataBase/users.csv";
+        String filePath = baseDirectory + relativePath;
         try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = csvReader.readLine()) != null) {
@@ -107,8 +124,10 @@ public class LoginPortal extends Application {
 
     // Implement your authentication logic here
     private boolean authenticate(String username, String password) {
-        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
-
+//        String filePath = "C:\\Users\\HP\\IdeaProjects\\ChatBook-UI_v1\\src\\main\\resources\\UserDataBase\\users.csv";
+        String baseDirectory = System.getProperty("user.dir");
+        String relativePath = "/src/main/resources/UserDataBase/users.csv";
+        String filePath = baseDirectory + relativePath;
         try (BufferedReader csvReader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = csvReader.readLine()) != null) {

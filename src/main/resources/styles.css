@@ -21,26 +21,31 @@
 
 /* Style the TabPane */
 .tab-pane {
-    -fx-background-color: #292929; /* Dark gray background color */
+    -fx-background-color: RED; /* Dark gray background color */
     -fx-text-background-color: white; /* Tab text color */
+
     -fx-tab-min-height: 30;
     -fx-tab-min-width: 50;
 }
 
 /* Style the tabs */
 .tab {
-    -fx-background-color: #99FFFF; /* Dark gray tab background color */
-    -fx-text-fill: #FFD700; /* Bright yellow tab text color */
-    -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+
+    -fx-background-color:aliceblue;
+    -fx-text-fill: white; /* Set tab text color to white */
+    -fx-text-background-color:WHITE;
+    -fx-font-family: "Calibri"; /* Use Arial font (replace with your desired font) */
+    -fx-font-size:13;
     -fx-font-weight: bold; /* Bold font */
 }
 
 /* Style the buttons */
 .button {
     -fx-background-color: #15913C; /* Darker green button background */
-    -fx-text-fill: white; /* Button text color */
+    -fx-text-fill: WHITE; /* Button text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
+
 
 /* Style the text fields */
 .text-field {
@@ -58,59 +63,73 @@
 
 /* Style the ListView */
 .list-view {
-    -fx-background-color: #292929; /* Dark gray background color */
+    -fx-background-color: rgba(0,0,0,0); /* Dark gray background color */
     -fx-text-background-color: white; /* ListView text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
+
 }
 
 /* Style the ListView items */
 .list-cell {
-    -fx-background-color: transparent; /* Make items transparent */
+    -fx-background-color : rgba(0,0,0,0.1);
     -fx-text-fill: white; /* ListView item text color */
     -fx-font-family: "Arial"; /* Use Arial font (replace with your desired font) */
 }
 
 #punch {
-    -fx-font-family: "Bradley Hand  ITC";
+    -fx-font-family: "Times New Roman";
     -fx-font-size: 20;
     -fx-text-shadow: 5px 5px;
     -fx-text-fill: white ;
-    -fx-translate-y: -30
 }
 
 .my-buttons{
     -fx-font-size: 18;
     -fx-text-fill: #f8f8f8;
+    -fx-translate-y: 10;
 }
 
 #header{
     -fx-text-fill: white ;
-    -fx-translate-y: -20;
 }
 
 .labels-newUserUI
 {
     -fx-text-fill: white;
-    -fx-font-size: 12;
-    -fx-translate-y: 8;
+    -fx-font-size: 14;
+    -fx-font-family: "Calibri";
 }
 
-.boxes-newUserUI{
+.tabpane-allchats{
+    -fx-background-color: rgba(2, 0, 15, 0.3);
+}
+
+.allchats-pane{
+    -fx-background-color : rgba(0,0,0,0.1);
+}
+
+#profiletab{
+    -fx-text-fill:WHITE;
+}
+
+.set-button{
+   -fx-translate-y : 10;
+}
+
+.client-chatbg{
+    -fx-control-inner-background: rgba(25, 77, 61,0.9);
+
+}
+.profilepane{
+    -fx-background-color: #FF5733;
+}
+
+.text{
+    -fx-text-fill: WHITE;
+}
+
+#chatui-prompt{
+    -fx-text-fill: white;
     -fx-font-size: 15;
-    -fx-translate-y: 10;
 }
 
-.my-buttons1{
-    -fx-font-size: 17;
-    -fx-text-fill: #f8f8f8;
-
-}
-
-.newuser-buttons{
-    -fx-translate-y: 30;
-
-}
-
-.newuser-header{
-    -fx-font-size: 36;
-}

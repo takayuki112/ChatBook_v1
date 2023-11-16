@@ -85,7 +85,7 @@ public class Client {
 //
 //    }
 
-//    public void listenForMessage()
+    //    public void listenForMessage()
 //    {
 //        new Thread(new Runnable() {
 //            @Override
@@ -154,4 +154,3 @@ public class Client {
     }
 
 }
-
