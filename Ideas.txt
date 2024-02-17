@@ -1,3 +1,8 @@
+THE SQL BRANCH -
+1. Integrate with MariaDB
+2. Store Login Data, profiles and folders and conversations in a database
+
+
 UI Features to Add -
 1. A Logo of Some sort, especially in the new blank screen
 2. Change the Tab Colours to something less contrasty?
