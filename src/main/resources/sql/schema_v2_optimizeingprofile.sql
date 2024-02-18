@@ -1,16 +1,8 @@
-
+-- This seems to be a bad idea.
 create table users( --entity
     user_id autoincrement primary key,
     username varchar(255) not null,
     password varchar(255) not null,
-)
-
-create table profiles(
-    -- a user can have multiple profiles
-    profile_id autoincrement primary key,
-    user_id int not null,
-    profile_name varchar(255) not null,
-    foreign key(user_id) references users(user_id)
 )
 
 create table folders(
@@ -18,8 +10,18 @@ create table folders(
     folder_id autoincrement primary key,
     profile_id int not null,
     folder_name varchar(255) not null,
-    foreign key(profile_id) references profiles(profile_id)
 )
+-- This seems to be a bad idea.
+create table profiles( -- relationship btw user and folder
+    user_id int not null,
+    folder_id int not null,
+    profile_name varchar(255) not null,
+    foreign key(user_id) references users(user_id)
+    foreign key(folder_id) references folders(folder_id)
+)
+-- This seems to be a bad idea.-- This seems to be a bad idea.-- This seems to be a bad idea.-- This seems to be a bad idea.-- This seems to be a bad idea.
+-- as of now...
+
 
 create table conversations( --entity
     conversation_id autoincrement primary key,
@@ -36,7 +38,7 @@ create table conversation_folders( --relationship
     foreign key (folder_id) references folders (folder_id)
 )
 
-create table participates_in( --relationship btw users and conversations
+create table participates_in( --relationship
     user_id int not null,
     conversation_id int not null,
     primary key(user_id, conversation_id),
